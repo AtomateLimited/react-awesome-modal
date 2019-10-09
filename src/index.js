@@ -65,14 +65,14 @@ export default class Modal extends Component {
     }
 
     render() {
-        const { className } = this.props;
+        const { className, overlayClassName } = this.props;
         return (
             <div>
                 <div className={className} style={this.state.visible ? this.state.style.container : this.state.style.containerHidden}>
                     <div style={this.state.visible ? {...this.state.style.panel} : this.state.style.panelHidden}>
                         {this.props.children}
                     </div>
-                    <div style={this.state.visible ? this.state.style.mask : this.state.style.maskHidden} onClick={this.props.onClickAway ? this.props.onClickAway : null} />
+                    <div className={overlayClassName} style={this.state.visible ? this.state.style.mask : this.state.style.maskHidden} onClick={this.props.onClickAway ? this.props.onClickAway : null} />
                 </div>
             </div>
         );
