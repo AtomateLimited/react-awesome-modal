@@ -65,9 +65,10 @@ export default class Modal extends Component {
     }
 
     render() {
+        const { className } = this.props;
         return (
             <div>
-                <div style={this.state.visible ? this.state.style.container : this.state.style.containerHidden}>
+                <div className={className} style={this.state.visible ? this.state.style.container : this.state.style.containerHidden}>
                     <div style={this.state.visible ? {...this.state.style.panel} : this.state.style.panelHidden}>
                         {this.props.children}
                     </div>
