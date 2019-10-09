@@ -10,7 +10,7 @@
     "react-component"
   ],
   "files": [
-    "lib"
+    "src"
   ],
   "directories": {
     "example": "examples"
